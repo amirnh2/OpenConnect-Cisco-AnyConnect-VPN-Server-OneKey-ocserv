@@ -1,6 +1,5 @@
 FROM docker.arvancloud.ir/alpine:3.13
-RUN sed -i 's|https://dl-cdn.alpinelinux.org/alpine/v3.13/|https://mirror.arvancloud.ir/alpine/v3.13/|g' /etc/apk/repositories \
-    && echo 'Acquire::Check-Valid-Until no;' > /etc/apt/apt.conf.d/99no-check-valid-until
+RUN sed -i 's|https://dl-cdn.alpinelinux.org/alpine/v3.13/|https://mirror.arvancloud.ir/alpine/v3.13/|g' /etc/apk/repositories
 ENV OCSERV_VERSION 1.1.2
 ENV CA_CN SAMPLE CA
 ENV CA_ORG Big Corp
